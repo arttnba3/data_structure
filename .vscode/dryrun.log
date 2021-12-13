@@ -1,0 +1,18 @@
+make --dry-run --keep-going --print-directory
+make: Entering directory '/home/arttnba3/Desktop/homework/data_structure/bigbig_homework'
+if [ ! -d "/home/arttnba3/Desktop/homework/data_structure/bigbig_homework/out" ]; then \
+	mkdir "/home/arttnba3/Desktop/homework/data_structure/bigbig_homework/out" ; \
+fi ;
+gcc -c user/user.c -o user.o -I "/home/arttnba3/Desktop/homework/data_structure/bigbig_homework"
+mv user.o '/home/arttnba3/Desktop/homework/data_structure/bigbig_homework/out'
+gcc -c shop/shop.c -o shop.o -I "/home/arttnba3/Desktop/homework/data_structure/bigbig_homework"
+mv shop.o '/home/arttnba3/Desktop/homework/data_structure/bigbig_homework/out'
+gcc -c info/info.c -o info.o -I "/home/arttnba3/Desktop/homework/data_structure/bigbig_homework"
+mv info.o '/home/arttnba3/Desktop/homework/data_structure/bigbig_homework/out'
+gcc -c scanner/scanner.c -o scanner.o -I "/home/arttnba3/Desktop/homework/data_structure/bigbig_homework"
+mv scanner.o '/home/arttnba3/Desktop/homework/data_structure/bigbig_homework/out'
+gcc -c main.c -o main.o -I "/home/arttnba3/Desktop/homework/data_structure/bigbig_homework"
+mv main.o '/home/arttnba3/Desktop/homework/data_structure/bigbig_homework/out'
+cd "/home/arttnba3/Desktop/homework/data_structure/bigbig_homework/out" && g++ user.o shop.o info.o scanner.o main.o -o OnlineShop -lpthread -lcrypt
+make: Leaving directory '/home/arttnba3/Desktop/homework/data_structure/bigbig_homework'
+ 
